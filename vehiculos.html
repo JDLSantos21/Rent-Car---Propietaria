@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- <?php 
+include 'views/head.php';
+?>  -->
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rent Car - Vehiculos</title>
+  <!-- ============Estilos=========== -->
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/vehiculos.css">
+  <!-- ============BOXICONS=========== -->
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+ 
+<header class="header">
+    <nav class="nav">
+      <ul class="main-menu">
+        <li class="menu-item"><a href="index.html" class="menu-link active-link"><i class='bx bx-home-alt'></i></a></li>
+        <li class="menu-item"><a href="vehiculos.html" class="menu-link"><i class='bx bx-car'></i></a></li>
+        <li class="menu-item"><a href="rentar.html" class="menu-link"><i class='bx bxs-key'></i></a></li>
+        <li class="menu-item"><a href="#" class="menu-link"><i class='bx bx-transfer-alt'></i></a></li>
+        <li class="menu-item"><a href="clientes.html" class="menu-link"><i class='bx bx-user'></i></a></li>
+      </ul>
+    </nav>
+  </header>
+
+<!-- <?php 
+include 'views/header.php';
+?> -->
+
+<main class="main-vehiculos">
+
+  <div class="scrool-button">
+    <i class='bx bx-mouse'></i>
+    <a href="#consulta-vehiculo" class="scrool-title">Desplazate</a>
+    <i class='bx bxs-down-arrow'></i>
+  </div>
+
+ <div class="registro-vehiculo_title__container">
+  <h1 class="Registro-vehiculo__title">Registrar Vehiculo</h1>
+ </div>
+
+<section class="registro-vehiculo__container" id="registro-vehiculos">
+
+  <form action="views/RVehiculo.php" enctype="multipart/form-data" method="POST"  class="form-RVehiculo">
+
+    <div class="inputs-container">
+
+      <div class="first-input_group">
+        <input type="text" class="RV-inputs" name="marca" placeholder="Marca" >
+        <input type="text" class="RV-inputs" name="modelo" placeholder="Modelo" >
+        <input type="text" class="RV-inputs" name="year" placeholder="Año" >
+        <input type="text" class="RV-inputs" name="tipo" placeholder="Tipo" >
+        <input type="text" class="RV-inputs" name="placa" placeholder="Placa" >
+      </div>
+      
+      <div class="second-input_group">
+        <input type="text" class="RV-inputs" name="chasis" placeholder="Chasis" >
+        <input type="text" class="RV-inputs" name="motor" placeholder="Motor" >
+        <input type="text" class="RV-inputs" name="Tcombustible" placeholder="Tipo de Combustible" >
+        <select name="estado" class="RV-inputs" id="estado">
+          <option selected disabled>Estado</option>
+          <option value="1">Disponible</option>
+          <option value="0">No Disponible</option>
+        </select>
+        <textarea name="descripcion" class="RV-inputs RV-textarea" placeholder="Descripcion" ></textarea>
+      </div>
+
+
+      <div class="RV-buttons">
+        <div class="input-file-container">
+          <p class="file-text">Agregar Imagen</p>
+          <input type="file" class="RV-input input-file" required name="imagen" id="car-img">
+        </div> 
+        <button type="submit" class="RV-button" name="registrar">Registrar Vehiculo</button>
+      </div>
+
+    </div>
+
+  </form>
+  
+</section>
+
+  <!-- ========== SECTION CONSULTA VEHICULOS ========== -->
+
+<section class="consulta-vehiculo__container" id="consulta-vehiculo">
+
+
+  <div class="consulta-vehiculo_title__container">
+    <h1 class="consulta-vehiculo__title">Consulta de Vehiculos</h1>
+ </div>
+
+  <div class="scrool-button">
+    <i class='bx bxs-up-arrow'></i>
+    <a href="#registro-vehiculos" class="scrool-title">Desplazate</a>
+    <i class='bx bx-mouse'></i>
+  </div>
+
+<div class="consulta-container">
+
+  <!-- ========== CONSULTA IMAGEN ========== -->
+  
+  <div class="CV-imagen_container" id="CV-imagen_container"> 
+    
+    <!-- <img src="source/images/hondaccord.png" alt="Honda Accord" class="CV-imagen"> -->
+    
+  </div>
+  
+  <!-- ========== CONSULTA INFO ========== -->
+  
+  <div class="CV-info_container">
+
+  <header class="CV-info_header">
+
+    <div class="CV-info_logo__container">
+        <img id="CV-info_logo" class="CV-info_logo">
+      </div>
+
+    <div class="CV-info_title__container">
+        <h2 class="CV-info_title" id="CV-info_title"></h2>
+      </div>
+
+  </header>
+
+
+  <div class="CV-info_main">
+
+    <div class="CV-info_main__details">
+      <h2 class="CV-info_fuel__title"><i class='bx bxs-detail'></i> Detalles</h2>
+      <div class="text-container CV-info_details__container">
+        <p class="CV-info_details__text">Tipo: <br> <i id="CV-info_details__tipo">Ejemplo</i></p>
+        <p class="CV-info_details__text">Chasis: <br> <i id="CV-info_details__chasis">Ejemplo</i></p>
+        <p class="CV-info_details__text">Motor: <br> <i id="CV-info_details__motor">Ejemplo</i></p>
+      </div>
+      
+    </div>
+
+    <div class="CV-info_main__fuel">
+      <h2 class="CV-info_fuel__title"><i class='bx bx-gas-pump'></i> Tipo Combustible <i class='bx bxs-ev-station' ></i></h2>
+      <div class="text-container">
+        <p class="CV-info_fuel__text" id="CV-info_fuel__text">Ejemplo</p>
+      </div>
+    </div>
+
+    <div class="CV-info_main__status">
+      <h2 class="CV-info_status__title"><i class='bx bx-exit'></i></i> Estado</h2>
+      <div class="status-text-container" id="status-text-container">
+        <h3 class="CV-info_status__text" id="CV-info_status__text">Ejemplo</i></h3>
+      </div>
+    </div>
+
+    <div class="CV-info_main__description">
+      <h2 class="CV-info_description__title"><i class='bx bx-comment-error'></i> Descripción</h2>
+      <div class="text-container">
+        <p class="CV-info_description__text" id="CV-info_description__text">Texto de ejemplo</p>
+      </div>
+    </div>
+    
+  </div>
+    
+
+
+
+
+    
+  </div>
+  
+  <!-- ========== CONSULTA SEARCH ========== -->
+
+  <div class="CV-search_container">
+
+
+    <table class="CV-table">
+
+      <thead>
+      <th>ID</th>
+      <th>Marca</th>
+      <th>Modelo</th>
+      <th>Año</th>
+      <th>Placa</th>
+      <th>Estado</th>
+      <th class="th-info">Info</th>
+    </thead>
+    
+      <tbody class="CV-tbody" id="CV-tbody">
+        
+      </tbody>
+    </table>
+
+    <div class="input-search_container">
+      <input type="text" class="CV-input" placeholder="Buscar vehiculo" id="CV-input">
+      <!-- <button class="CV-button" id="CV-button" >Buscar</button> -->
+    </div>
+
+  </div>
+
+</div>
+
+
+</section>
+
+
+</main>
+
+<script src="js/app.js"></script>
+
+</body>
+</html>
+
+
+
+
