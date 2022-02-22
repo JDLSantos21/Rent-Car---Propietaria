@@ -9,6 +9,9 @@
 --text-color:#000000;
 --button-color: #4d7ae4;
 --button-hover:#2b59c7;
+--title-color:#4b62e0;
+--title-textShadow:1px 1px 3px rgba(0, 0, 0, 0.295);
+--button-boxshadow:2px 1px 5px rgba(255, 255, 255, 0.233);
 
 
 /* ============Fonts y tipografia=========== */
@@ -324,8 +327,8 @@ background: radial-gradient(circle, rgba(233,243,245,1) 0%, rgba(13,115,130,1) 1
 
 .Registro-vehiculo__title, .consulta-vehiculo__title{
   font-size:1.8rem;
-  color:#4b62e0;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.295);
+  color:var(--title-color);
+  text-shadow:var(--title-textShadow);
 }
 
 /* ============Vehiculos PAGE ---REGISTRO DE VEHICULO---=========== */
@@ -458,7 +461,7 @@ color: var(--text-color);
 }
 
 .RV-button, .input-file-container{
-box-shadow: 2px 1px 5px rgba(255, 255, 255, 0.233);
+box-shadow: var(--button-boxshadow);
 }
 
 .file-text{
@@ -726,3 +729,7 @@ th{
 .button-show_info:hover{
   background-color:var(--button-hover);
 }
+
+
+
+

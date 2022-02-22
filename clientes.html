@@ -7,6 +7,7 @@
   <title>Rent Car - Principal</title>
   <!-- ============Estilos=========== -->
   <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/clientes.css">
   <!-- ============BOXICONS=========== -->
   <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -24,7 +25,40 @@
     </nav>
   </header>
 
+  <main class="clientes--main">
+    
+    <div class="RC--title--container">
+      <h1 class="RC--title">REGISTRO DE CLIENTES</h1>
+    </div>
 
+    <section class="registro--clientes">
+
+        <form action="views/RCliente.php" class="form-RCliente" enctype="multipart/form-data" method="post">
+  
+          <div class="inputs-container">
+  
+            <input type="text" class="RC-inputs" name="nombre" placeholder="Introduzca el nombre">
+            <input type="text" class="RC-inputs" name="cedula" placeholder="Documento de identificacion">
+            <input type="number" class="RC-inputs" name="tarjeta" placeholder="Introduzca la tarjeta">
+            <input type="number" class="RC-inputs" name="limCredito" placeholder="Introduzca el limite de credito">
+            <input type="text" class="RC-inputs" name="tPersona" placeholder="Introduzca el tipo de persona">
+            <input type="text" class="RC-inputs" name="estado" placeholder="Introduzca el estado">
+  
+          </div>
+  
+          <div class="RC-buttons">
+            <div class="input-file-container">
+              <p class="file-text">Agregar Imagen</p>
+              <input type="file" class="RV-input input-file" required name="imagen" id="car-img">
+            </div> 
+  
+            <button type="submit" class="RC--button-registrar" name="registrarC">Registrar Cliente</button>
+          </div>
+  
+        </form>
+
+    </section>
+  </main>
 
 </body>
 </html>
