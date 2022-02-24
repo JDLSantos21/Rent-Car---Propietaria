@@ -36,6 +36,7 @@ width:60%;
 }
 
 .login--input{
+  transition: 0.3s ease-in-out;
   position: absolute;
   height:100%;
   width:100%;
@@ -49,6 +50,7 @@ width:60%;
 }
 
 .login--icon{
+transition: 0.3s ease-in-out;
 color:rgb(190, 184, 184);
 position: absolute;
 transform: translateY(-50%);
@@ -86,4 +88,12 @@ cursor: pointer;
 
 .show--danger-error{
  opacity:1;
+}
+
+.focus{
+  border-bottom: 2px solid rgb(67, 155, 228);
+}
+
+.focus-icon{
+  color:rgb(67, 155, 228);
 }

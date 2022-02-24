@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rent Car - Home</title>
+  <!-- ============Estilos=========== -->
+  <link rel="stylesheet" href="css/index.css">
+  <!-- ============BOXICONS=========== -->
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+  <header class="header">
+    <nav class="nav">
+      <ul class="main-menu">
+        <li class="menu-item"><a href="home.html" class="menu-link active-link"><i class='bx bx-home-alt'></i></a></li>
+        <li class="menu-item"><a href="vehiculos.html" class="menu-link"><i class='bx bx-car'></i></a></li>
+        <li class="menu-item"><a href="rentar.html" class="menu-link"><i class='bx bxs-key'></i></a></li>
+        <li class="menu-item"><a href="#" class="menu-link"><i class='bx bx-transfer-alt'></i></a></li>
+        <li class="menu-item"><a href="clientes.html" class="menu-link"><i class='bx bx-user'></i></a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <main class="index-main">
+
+    <div class="sections-container__content">
+
+      <div class="info-negocio">
+
+        <div class="logo-container">
+          <img src="source/images/logo.png" alt="Logo Rent Car" class="logo">
+        </div>
+        
+        <h1 class="info-neg__title">Sistema Gestión Rent Car</h1>
+
+        <div class="info-negocio_data">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus corporis, itaque vitae vel rerum suscipit, facere possimus iste saepe odio, minus quibusdam neque eaque necessitatibus. Consequatur nesciunt voluptates magni deleniti?
+          Soluta nobis et cum eum possimus tenetur rem nam consectetur repudiandae. Est accusamus distinctio ratione hic fuga rerum qui minus reprehenderit eum, sit dolore ducimus amet velit magni iste! Laudantium?
+        </div>
+
+        <div class="info-negocio_footer">
+          <h5 class="info-footer_text">Derechos Reservados &#169 Jose A. De Los Santos.<br>Contacto: 849-356-0359.</h5>
+        </div>
+
+
+        
+      </div>
+    
+      <div class="sections-container">
+
+        <section class="sections section-vehiculos">
+          <div class="sections-title_container">
+            <h2 class="sections-title"><i class='bx bxs-car vehiculos-icon'></i> </i>Vehiculos</h2>
+          </div>
+          <article class="articles cars-article">
+            <h4 class="article-text"><i class='bx bxs-circle'></i> Disponibles: <i id="AT_avCars" class="article-text_i"></i></h4>
+            <h4 class="article-text">Registrados: <i id="AT_regCars" class="article-text_i"></i></h4>
+          </article>
+        </section>
+
+        <section class="sections section-rentas">
+          <div class="sections-title_container">
+            <h2 class="sections-title"><i class='bx bxs-key rentas-icon'></i> Rentas</h2>
+          </div>
+          <article class="articles rents-article">
+            <h4 class="article-text">Vehiculos En Renta: <i id="AT_rtCars" class="article-text_i"></i></h4>
+          </article>
+        </section>
+
+        <section class="sections section-empleados">
+          <div class="sections-title_container">
+            <h2 class="sections-title"><i class='bx bxs-user-account empleado-icon'></i> Empleados</h2>
+          </div>
+          <article class="articles empleados-article">
+            <h4 class="article-text"><i class='bx bxs-circle'></i> Activos: <i id="AT_emAct" class="article-text_i"></i></h4>
+            <h4 class="article-text">Total: <i id="AT_totalEm" class="article-text_i"></i></h4>
+          </article>
+        </section>
+
+        <section class="sections section-clientes">
+          <div class="sections-title_container">
+            <h2 class="sections-title"><i class='bx bxs-user clientes-icon'></i> Clientes</h2>
+          </div>
+          <article class="articles clientes-article">
+            <h4 class="article-text"><i class='bx bxs-circle'></i> Activos: <i id="AT_clAct" class="article-text_i"></i></h4>
+            <h4 class="article-text">Clientes Registrados: <i id="AT_clReg" class="article-text_i"></i></h4>
+          </article>
+        </section>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <script src="js/showIndex.js"></script>
+
+</body>
+</html>
