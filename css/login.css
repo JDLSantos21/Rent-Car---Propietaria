@@ -1,0 +1,89 @@
+.login--main{
+  width:100%;
+  height: 100vh;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login--container{
+  flex-direction: column;
+  position: relative;
+  bottom:10px;
+  background-color: rgba(255, 255, 255, 0.548);
+  width:50%;
+  height:80%;
+  border-radius:1rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.26);
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputs--loginContainer{
+display:flex;
+flex-direction: column;
+align-items: center;
+width:60%;
+}
+
+.input-field{
+  position:relative;
+  height:50px;
+  width:100%;
+  margin-top:20px;
+}
+
+.login--input{
+  position: absolute;
+  height:100%;
+  width:100%;
+  padding:0 35px;
+  border:none;
+  outline:none;
+  background-color: transparent;
+  border-bottom: 2px solid #ccc;
+  border-top:2px solid transparent;
+
+}
+
+.login--icon{
+color:rgb(190, 184, 184);
+position: absolute;
+transform: translateY(-50%);
+top:50%;
+left:0;
+font-size:20px;
+
+}
+ 
+.button--signin{
+transition:0.3s ease;
+height:40px;
+background-color: rgb(92, 179, 236);
+width:150px;
+border-radius:3px;
+margin-top:20px;
+cursor: pointer;
+}
+
+.button--signin:hover{
+  background-color: rgb(52, 142, 202);
+}
+
+
+.danger-error{
+  display:block;
+  background-color: rgba(233, 211, 211, 0.836);
+  border: 2px solid red;
+  padding:20px;
+  margin-top:20px;
+  color: rgba(255, 0, 0, 0.993);
+  opacity:0;
+  
+}
+
+.show--danger-error{
+ opacity:1;
+}
