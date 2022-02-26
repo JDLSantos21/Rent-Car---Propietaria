@@ -15,22 +15,14 @@ if(!$link){
 
 if(isset($_POST['registrarC'])){
   $nombre =($_POST["nombre"]);
+  $apellidos =($_POST["apellidos"]);
   $cedula =$_POST["cedula"];
   $tarjeta =$_POST["tarjeta"];
   $limCredito =$_POST["limCredito"];
   $tPersona =$_POST["tPersona"];
   $estado =$_POST["estado"];
+  $fecha =$_POST["fecha"];
 }
-
-$insertarDatos = "INSERT INTO clientes VALUES('NULL',
-                                                '$nombre',
-                                                '$cedula',
-                                                '$tarjeta',
-                                                '$limCredito',
-                                                '$tPersona',
-                                                '$estado')";
-
-$ejecutarInsert = mysqli_query($link,$insertarDatos);
 
 if($_FILES["imagen"] ["error"]>0){
   echo "Error al cargar el archivo.";
@@ -45,6 +37,20 @@ $newName = $cedula.'.'.$extensionImagen;
 $fotoPerfil = $ruta.'/'.$newName;
 
 $resultado = @move_uploaded_file($sourceFoto, $fotoPerfil);
+
+$insertarDatos = "INSERT INTO clientes VALUES('NULL',
+                                                '$nombre',
+                                                '$apellidos',
+                                                '$cedula',
+                                                '$tarjeta',
+                                                '$limCredito',
+                                                '$tPersona',
+                                                '$fecha',
+                                                '$extensionImagen',
+                                                '$estado')";
+
+$ejecutarInsert = mysqli_query($link,$insertarDatos);
+
 
 
 

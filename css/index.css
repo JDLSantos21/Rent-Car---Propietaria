@@ -13,6 +13,9 @@
 --title-textShadow:1px 1px 3px rgba(0, 0, 0, 0.295);
 --button-boxshadow:2px 1px 5px rgba(255, 255, 255, 0.233);
 
+--box-colors-clientes-details:white;
+--headers-colors-clientes-details:aliceblue;
+
 
 /* ============Fonts y tipografia=========== */
 --body-font: 'Poppins', sans-serif;

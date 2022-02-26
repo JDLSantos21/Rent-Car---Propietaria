@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="css/clientes.css">
   <!-- ============BOXICONS=========== -->
   <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+   <!-- ============FONT AWESOME=========== -->
+   <script src="https://kit.fontawesome.com/91ab5d32e4.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -38,11 +40,13 @@
           <div class="inputs-container">
   
             <input type="text" class="RC-inputs" name="nombre" placeholder="Introduzca el nombre">
+            <input type="text" class="RC-inputs" name="apellidos" placeholder="Introduzca los Apellidos">
             <input type="text" class="RC-inputs" name="cedula" placeholder="Documento de identificacion">
             <input type="number" class="RC-inputs" name="tarjeta" placeholder="Introduzca la tarjeta">
             <input type="number" class="RC-inputs" name="limCredito" placeholder="Introduzca el limite de credito">
             <input type="text" class="RC-inputs" name="tPersona" placeholder="Introduzca el tipo de persona">
             <input type="text" class="RC-inputs" name="estado" placeholder="Introduzca el estado">
+            <input type="date" class="RC-inputs" name="fecha">
   
           </div>
   
@@ -58,7 +62,90 @@
         </form>
 
     </section>
-  </main>
 
+  
+  <div class="clientes--main2">
+
+    <section class="consulta--clientes">
+
+      <div class="clientes--info">
+
+        <div class="foto--container">
+           <div class="foto--container-2">
+            <div class="clientes--info-foto--container">
+              <img src="source/images/clientes/fotosPerfil/40030912449.jpg" class="clientes--info-foto" id="topFoto">
+            </div>
+            
+            <div class="clientes--info-text">
+              <h3 class="clientes--info-name" id="topName">Jose Armando De Los Santos</h3>
+              <p class="clientes--info-fecha">Cliente desde: <i id="topFecha">22/22/2222</i></p>
+            </div>
+           </div> 
+        </div>
+
+        <div class="info--cliente-container">
+          <div class="info--cliente-container-2">
+            <header class="info--cliente-header">
+              <h2>Informacion del Cliente</h2>
+            </header>
+
+            <div class="info--cliente-main">
+              <div class="info--cliente--texts">
+                <p class="info--cliente-text">Nacionalidad: <span class="info--cliente-span" id="nacionalidad"></span></p>
+                <p class="info--cliente-text">Cedula y/o Pasaporte: <span class="info--cliente-span" id="cedOPast"></span></p>
+                <p class="info--cliente-text">Tipo de Persona: <span class="info--cliente-span" id="tPersona"></span></p>
+                <p class="info--cliente-text">Limite de Credito: <span class="info--cliente-span" id="ltCredito"></span></p>
+                <p class="info--cliente-text">Estado: <span class="info--cliente-span" id="estado"></span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cliente--history-container">
+          <div class="cliente--history-container-2">
+            <header class="cliente--history-header">
+                <h2>Historico del Cliente</h2>
+              </header>
+
+              <div class="cliente--history-main">
+                <p>prueba</p>
+              </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="clientes--listado">
+        <div class="clientes--listado-table-container">
+  
+          <div class="clientes--listado-table-header">
+            <h2 class="clientes--listado-table--title">Listado de Clientes</h2>
+          </div>
+
+          <table class="clientes--listado-table">
+            <tbody id="cListtBody">
+              <tr class="tr" id="tr">
+                
+              </tr> 
+            </tbody>
+             <!-- <td class="td">
+                <div class="cliente--photo">
+                  <img class="cliente--photo--img" src="source/images/clientes/fotosPerfil/40230918449.jpg" alt="">
+                </div>
+                <h5 class="clientes--listado-name">Juan de los Palotes</h5>
+
+                <button class="clientes--listado-button" id="cListButton"><i class="fa-solid fa-eye"></i></button>
+              </td> -->
+          </table>
+
+        </div>
+      </div>  
+
+    </section>
+    
+  </div>
+    
+
+  </main>
+<script src="js/clientes.js"></script>
 </body>
 </html>

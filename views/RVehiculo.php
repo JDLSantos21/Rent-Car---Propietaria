@@ -42,7 +42,6 @@ $insertarDatos = "INSERT INTO carslist VALUES('NULL',
 
 $ejecutarInsert = mysqli_query($link,$insertarDatos);
 
-
 if($_FILES["imagen"] ["error"]>0){
   echo "Error al cargar el archivo.";
 }
@@ -55,9 +54,7 @@ $extensionImagen = array_pop($explode);
 $newName = $placa.'.'.$extensionImagen;
 $imagenCarro = $ruta.'/'.$newName;
 
-
 $resultado = @move_uploaded_file($sourceFoto, $imagenCarro);
-
 
 
 
